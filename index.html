@@ -171,12 +171,12 @@ h1 .linha span{display:inline-block}
 /* ---------- 5. o espaço pelo círculo ---------- */
 .portal{position:relative;height:100vh;overflow:hidden;background:var(--creme)}
 .portal .foto{position:absolute;inset:0;will-change:clip-path}
-.portal .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
-.portal .foto::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 50% 55%,rgba(40,20,18,.28) 20%,rgba(40,20,18,.55))}
-.portal h2 em{color:var(--verde)}
-.portal .titulo{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;z-index:2;padding:0 var(--lado);pointer-events:none}
-.portal h2{font-size:clamp(3rem,8vw,7.4rem);max-width:12ch;color:var(--creme);text-shadow:0 4px 30px rgba(40,20,18,.45)}
-.portal .mini{margin-top:20px;color:rgba(251,245,236,.9)}
+.portal .foto img{width:100%;height:100%;object-fit:cover;object-position:55% 64%}
+.portal .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,36,22,.62) 0%,rgba(28,36,22,.25) 30%,rgba(28,36,22,0) 50%)}
+.portal h2 em{color:var(--rosa)}
+.portal .titulo{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;z-index:2;padding:0 var(--lado) clamp(36px,6vh,72px);pointer-events:none}
+.portal h2{font-size:clamp(2.6rem,5.2vw,5rem);color:var(--creme)}
+.portal .mini{margin-top:18px;color:rgba(251,247,236,.9)}
 .visite{padding:clamp(80px,10vw,130px) 0;background:var(--rosa-claro)}
 .visite .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,96px);align-items:center}
 .visite .cafe{border-radius:36px;overflow:hidden;aspect-ratio:4/4.4;box-shadow:0 40px 70px -40px rgba(62,37,32,.5)}
@@ -245,6 +245,7 @@ h1 .linha span{display:inline-block}
   .cartao{grid-template-columns:1fr;min-height:0;gap:10px}
   .rodape{grid-template-columns:1fr}
   .rolar{display:none}
+  .portal .foto img{object-position:68% 50%}
 }
 @media (hover:none),(max-width:767px){
   .topo.solido{background:rgba(251,247,236,.97);backdrop-filter:none;-webkit-backdrop-filter:none}
@@ -364,9 +365,9 @@ h1 .linha span{display:inline-block}
 
   <!-- 5. o espaço revelado por um círculo -->
   <section class="portal" id="espaco" aria-label="Nosso espaço">
-    <div class="foto" id="portal-foto"><img src="espaco.webp" width="1045" height="1800" alt="Área externa da Frandocce com mesas e cadeiras vermelhas, flores, bandeirinhas e parede coral" loading="lazy"><div class="grao" aria-hidden="true"></div></div>
+    <div class="foto" id="portal-foto"><img src="espaco-neon.webp" srcset="espaco-neon-p.webp 1100w, espaco-neon.webp 2200w" sizes="100vw" width="2200" height="2186" alt="Parede rosa com arcos, flores e letreiro neon, banco estofado verde-escuro e mesinha com cupcake" loading="lazy"><div class="grao" aria-hidden="true"></div></div>
     <div class="titulo" id="portal-titulo">
-      <h2>Um cantinho <em>cor-de-rosa</em>.</h2>
+      <h2>Um cantinho <em style="white-space:nowrap">cor-de-rosa</em>.</h2>
       <p class="mini">Parque Vitória</p>
     </div>
   </section>
